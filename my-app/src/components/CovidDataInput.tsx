@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { Countries } from './Constants';
+import { Countries } from './CountryConstants';
 
 // ISO 3166-1 alpha-2
 // ⚠️ No support for IE 11
