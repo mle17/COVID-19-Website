@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import { NonTerritoryStates } from './UsStateConstants';
+import { NonTerritoryStates } from '../constants/UsStateConstants';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
