@@ -414,4 +414,4 @@ export const States = [
     }
 ];
 
-export const NonTerritoryStates = States.filter(state => state.territory == false);
+export const NonTerritoryStates = States.filter(state => state.territory === false);
