@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { Countries } from './CountryConstants';
+import { NonTerritoryStates } from './UsStateConstants';
 
 // ISO 3166-1 alpha-2
 // ⚠️ No support for IE 11
@@ -26,29 +26,29 @@ const useStyles = makeStyles({
   },
 });
 
-export default function CountrySelect() {
+export default function UsStateSelect() {
   const classes = useStyles();
 
   return (
     <Autocomplete
       id="country-select-demo"
       style={{ width: 300 }}
-      options={Countries}
+      options={NonTerritoryStates}
       classes={{
         option: classes.option,
       }}
       autoHighlight
-      getOptionLabel={(option) => option.label}
+      getOptionLabel={(option) => option.name}
       renderOption={(option) => (
         <React.Fragment>
-          <span>{countryToFlag(option.code)}</span>
-          {option.label} ({option.code}) +{option.phone}
+          <span></span>
+          ({option.abbreviation}) {option.name}
         </React.Fragment>
       )}
       renderInput={(params) => (
         <TextField
           {...params}
-          label="Choose a country"
+          label="Choose a state"
           variant="outlined"
           inputProps={{
             ...params.inputProps,
