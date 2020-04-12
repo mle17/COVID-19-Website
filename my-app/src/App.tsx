@@ -2,16 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { NumberDaysQuarantinedForm } from "./components/NumberDaysQuarantinedForm";
-import UsStatesForm from "./components/UsStatesForm";
+import Covid19App from './components/Covid19App';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <UsStatesForm />
-        <NumberDaysQuarantinedForm />
+        <Covid19App />
       </header>
     </div>
   );
