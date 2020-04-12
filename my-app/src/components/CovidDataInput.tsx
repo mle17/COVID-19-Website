@@ -41,8 +41,8 @@ export default function UsStateSelect() {
       getOptionLabel={(option) => option.name}
       renderOption={(option) => (
         <React.Fragment>
-          <span></span>
-          ({option.abbreviation}) {option.name}
+          <span>{option.abbreviation}</span>
+          {option.name}
         </React.Fragment>
       )}
       renderInput={(params) => (
