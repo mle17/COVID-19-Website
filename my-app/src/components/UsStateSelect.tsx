@@ -19,27 +19,27 @@ export default function UsStateSelect() {
 
   return (
     <Autocomplete 
-    id="country-select-demo" 
-    style={{ width: 300 }} 
-    options={NonTerritoryStates} 
-    classes={{
-      option: classes.option,
-    }} 
-    autoHighlight 
-    getOptionLabel={(option) => option.name} 
-    renderOption={(option) => 
-      (<React.Fragment>
-        <span>{option.abbreviation}</span>
-        {option.name}
-      </React.Fragment>)} 
-      
-    renderInput={(params) => 
-      (<TextField {...params} 
-        label="Choose a state" 
-        variant="outlined" 
-        inputProps={{
-          ...params.inputProps,
-        autoComplete: 'new-password',
+      id="country-select-demo" 
+      style={{ width: 300 }} 
+      options={NonTerritoryStates} 
+      classes={{
+        option: classes.option,
+      }} 
+      autoHighlight 
+      getOptionLabel={(option) => option.name} 
+      renderOption={(option) => 
+        (<React.Fragment>
+          <span>{option.abbreviation}</span>
+          {option.name}
+        </React.Fragment>)} 
+        
+      renderInput={(params) => 
+        (<TextField {...params} 
+          label="Choose a state" 
+          variant="outlined" 
+          inputProps={{
+            ...params.inputProps,
+          autoComplete: 'new-password',
         }} 
       />)} 
     />);
