@@ -59,3 +59,16 @@ export default function UsStateSelect() {
     />
   );
 }
+
+export function GetNumberDaysQuarantined() {
+  return (
+    <TextField
+      id="standard-number"
+      label="Day(s)"
+      type="number"
+      InputLabelProps={{
+        shrink: true,
+      }}
+    />
+  );
+}
