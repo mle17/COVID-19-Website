@@ -13,6 +13,13 @@ class Covid19App extends React.Component {
         };
     }
 
+    handleDaysChange(e: React.ChangeEvent<HTMLInputElement>) {
+        this.setState(
+            {
+                numDays:e.target.value
+            });
+    }
+
     render() {
         return (
         <div>
