@@ -16,8 +16,12 @@ import { NonTerritoryStates } from '../constants/UsStateConstants';
 
 // this.classes = useStyles();
 
-class UsStatesForm extends React.Component {
-  constructor(props: Readonly<{}>) {
+interface OnSelectProps {
+  OnSelectHandler?: (event: React.ChangeEvent<HTMLInputElement>) => void
+}
+
+class UsStatesForm extends React.Component<OnSelectProps> {
+  constructor(props: OnSelectProps) {
     super(props);
 }
 
@@ -37,7 +41,7 @@ class UsStatesForm extends React.Component {
           <span>{option.abbreviation}</span>
           {option.name}
         </React.Fragment>)} 
-        
+
       renderInput={(params) => 
         (<TextField {...params} 
           label="Choose a state" 
@@ -45,7 +49,8 @@ class UsStatesForm extends React.Component {
           inputProps={{
             ...params.inputProps,
           autoComplete: 'new-password',
-          }} 
+          }}
+
         />)
       } 
     />);

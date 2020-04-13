@@ -12,7 +12,8 @@ interface IStateResult {
 
 interface IState {
     isInputFormComplete: boolean,
-    numDays: string
+    numDays: string,
+    state: string | null
 }
 
 class Covid19App extends React.Component<{}, IState> {
@@ -21,21 +22,27 @@ class Covid19App extends React.Component<{}, IState> {
 
         this.state = {
             isInputFormComplete: false,
-            numDays: "7"
+            numDays: "7",
+            state: null
         };
 
         this.handleDaysChange = this.handleDaysChange.bind(this);
     }
 
-    handleDaysChange(e: React.ChangeEvent<HTMLInputElement>) {
-        this.setState({numDays:e.target.value});
+    handleDaysChange(event: React.ChangeEvent<HTMLInputElement>) {
+        this.setState({numDays:event.target.value});
+    }
+
+    handleCountryChange(event: React.ChangeEvent<HTMLInputElement>) {
+        this.setState({state: event.target.value});
     }
 
     render() {
         console.log(this.state.numDays);
+        console.log(this.state.state);
         return (
         <div>
-            <UsStatesForm />
+            <UsStatesForm OnSelectHandler={this.handleCountryChange}/>
             <NumberDaysQuarantinedForm OnChangeHandler={this.handleDaysChange}/>
         </div>)
     }
