@@ -6,12 +6,8 @@ interface OnChangeProps {
 }
 
 class NumberDaysQuarantinedForm extends React.Component<OnChangeProps> {
-  OnChangeProps!: OnChangeProps;
-
   constructor(props: OnChangeProps) {
     super(props);
-    
-    this.OnChangeProps = props;
   }
 
   render() {
@@ -24,7 +20,7 @@ class NumberDaysQuarantinedForm extends React.Component<OnChangeProps> {
       InputLabelProps={{
         shrink: true,
       }}
-      onChange={this.OnChangeProps.OnChangeHandler}
+      onChange={this.props.OnChangeHandler}
     />);
   }
 }
