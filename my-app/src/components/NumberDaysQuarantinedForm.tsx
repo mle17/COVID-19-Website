@@ -5,7 +5,7 @@ interface OnChangeProps {
   OnChangeHandler: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-class NumberDaysQuarantinedForm extends React.Component {
+class NumberDaysQuarantinedForm extends React.Component<OnChangeProps> {
   OnChangeProps!: OnChangeProps;
 
   constructor(props: OnChangeProps) {
