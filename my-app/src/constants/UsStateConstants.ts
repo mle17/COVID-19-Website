@@ -1,4 +1,6 @@
-export const States = [
+import { IStateResult } from "../interfaces/interfaces";
+
+const States: IStateResult[] = [
     {
         name: "Alabama",
         abbreviation: "AL",
