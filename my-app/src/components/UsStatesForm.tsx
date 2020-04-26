@@ -1,7 +1,9 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
+import Autocomplete, { AutocompleteChangeReason } from '@material-ui/lab/Autocomplete';
 import { NonTerritoryStates } from '../constants/UsStateConstants';
+import { IStateResult } from "../interfaces/interfaces";
+
 // import { makeStyles } from '@material-ui/core/styles';
 
 // const useStyles = makeStyles({
@@ -17,17 +19,20 @@ import { NonTerritoryStates } from '../constants/UsStateConstants';
 // this.classes = useStyles();
 
 interface OnSelectProps {
-  OnSelectHandler?: (event: React.ChangeEvent<HTMLInputElement>) => void
+  OnSelectHandler?: (
+    event: React.ChangeEvent<{}>, 
+    value: IStateResult | null,
+    reason: AutocompleteChangeReason) => void
 }
 
 class UsStatesForm extends React.Component<OnSelectProps> {
   constructor(props: OnSelectProps) {
     super(props);
-}
+  }
 
   render() {
     return (
-    <Autocomplete 
+    <Autocomplete<IStateResult> 
       id="country-select-demo" 
       style={{ width: 300 }} 
       options={NonTerritoryStates} 
@@ -38,19 +43,18 @@ class UsStatesForm extends React.Component<OnSelectProps> {
       getOptionLabel={(option) => option.name} 
       renderOption={(option) => 
         (<React.Fragment>
-          <span>{option.abbreviation}</span>
           {option.name}
         </React.Fragment>)} 
-
+      onChange={this.props.OnSelectHandler}
       renderInput={(params) => 
-        (<TextField {...params} 
+        (<TextField 
+          {...params} 
           label="Choose a state" 
           variant="outlined" 
           inputProps={{
             ...params.inputProps,
           autoComplete: 'new-password',
           }}
-
         />)
       } 
     />);
