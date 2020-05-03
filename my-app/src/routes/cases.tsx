@@ -6,8 +6,7 @@ import { NovelCovid, State } from 'novelcovid';
  * @param inputState Takes in full state name (ex: "California").
  * @returns State data class.
  */
-async function getCasesForState(inputState: string)
-{
+async function getCasesForState(inputState: string) {
     // Call module to get state data.
     const track: NovelCovid = new NovelCovid();
     const statesData: State[] = await track.states();
@@ -22,4 +21,23 @@ async function getCasesForState(inputState: string)
     return selectedStateData;
 }
 
-export default getCasesForState;
+/**
+ * 
+ * @param usState 
+ * @param numDays 
+ */
+function getFutureNumInfected(usState: string | undefined, numDays: number) {
+    const numDaysAfterDoubling: number = 14;
+    const doublingPeriod = numDays / numDaysAfterDoubling;
+
+    const futureNumInfected = Math.pow(2, doublingPeriod)
+        .toFixed(2);
+
+    return futureNumInfected;
+}
+
+
+export { 
+    getCasesForState,
+    getFutureNumInfected
+};
