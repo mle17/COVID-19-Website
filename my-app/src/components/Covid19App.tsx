@@ -4,6 +4,7 @@ import NumberDaysQuarantinedForm from "./NumberDaysQuarantinedForm";
 import { AutocompleteChangeReason } from "@material-ui/lab/Autocomplete";
 import { IStateResult } from "../interfaces/interfaces";
 import ResultsDisplay from "./ResultsDisplay";
+import { Grid } from "@material-ui/core";
 
 interface IState {
     isInputFormComplete: boolean,
@@ -43,12 +44,24 @@ class Covid19App extends React.Component<{}, IState> {
         console.log(this.state);
         return (
             <div>
-                <UsStatesForm OnSelectHandler={this.handleCountryChange}/>
-                <NumberDaysQuarantinedForm OnChangeHandler={this.handleDaysChange}/>
-                <ResultsDisplay 
-                    numDays={this.state.numDays} 
-                    usState={this.state.usState}
-                />
+                <Grid container spacing={3}>
+                    <Grid container xs={12} justify="center" alignItems="center" alignContent="center">
+                        <UsStatesForm
+                            OnSelectHandler={this.handleCountryChange}
+                        />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <NumberDaysQuarantinedForm 
+                            OnChangeHandler={this.handleDaysChange}
+                        />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <ResultsDisplay 
+                            numDays={this.state.numDays} 
+                            usState={this.state.usState}
+                        />
+                    </Grid>
+                </Grid>
             </div>)
     }
 }

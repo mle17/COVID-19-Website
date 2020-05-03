@@ -34,7 +34,9 @@ class UsStatesForm extends React.Component<OnSelectProps> {
     return (
     <Autocomplete<IStateResult> 
       id="country-select-demo" 
-      style={{ width: 300 }} 
+      style={{ 
+        width: 300,
+      }} 
       options={NonTerritoryStates} 
       // classes={{
       //   option: this.classes.option,
