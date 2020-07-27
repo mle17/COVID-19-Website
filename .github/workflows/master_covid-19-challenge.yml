@@ -17,7 +17,6 @@ jobs:
 
     - name: Change to correct directory
       run: |
-        cd ./my-app/
         ls -l
 
     - name: Set up Node.js version
