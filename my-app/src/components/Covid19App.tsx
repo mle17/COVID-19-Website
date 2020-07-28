@@ -23,14 +23,14 @@ class Covid19App extends React.Component<{}, IState> {
         };
 
         this.handleDaysChange = this.handleDaysChange.bind(this);
-        this.handleCountryChange = this.handleCountryChange.bind(this);
+        this.handleStateChange = this.handleStateChange.bind(this);
     }
 
     handleDaysChange(event: React.ChangeEvent<HTMLInputElement>) {
         this.setState({numDays:event.target.value});
     }
 
-    handleCountryChange(
+    handleStateChange(
         event: React.ChangeEvent<{}>, 
         value: IStateResult | null,
         reason: AutocompleteChangeReason) {
@@ -47,7 +47,7 @@ class Covid19App extends React.Component<{}, IState> {
                 <Grid container spacing={3}>
                     <Grid container xs={12} justify="center" alignItems="center" alignContent="center">
                         <UsStatesForm
-                            OnSelectHandler={this.handleCountryChange}
+                            OnSelectHandler={this.handleStateChange}
                         />
                     </Grid>
                     <Grid item xs={12}>
