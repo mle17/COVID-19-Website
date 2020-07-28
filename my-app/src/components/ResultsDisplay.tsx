@@ -12,10 +12,6 @@ interface IResultsInput {
 }
 
 class ResultsDisplay extends React.Component<IResultsInput> {
-    constructor(props: IResultsInput) {
-      super(props);
-    }
-
     render() {
         const usState: string | undefined = this.props.usState;
         const numDays: number = parseInt(this.props.numDays);

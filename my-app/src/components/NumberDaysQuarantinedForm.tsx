@@ -6,10 +6,6 @@ interface OnChangeProps {
 }
 
 class NumberDaysQuarantinedForm extends React.Component<OnChangeProps> {
-  constructor(props: OnChangeProps) {
-    super(props);
-  }
-
   render() {
    return (
     <TextField 

@@ -26,10 +26,6 @@ interface OnSelectProps {
 }
 
 class UsStatesForm extends React.Component<OnSelectProps> {
-  constructor(props: OnSelectProps) {
-    super(props);
-  }
-
   render() {
     return (
     <Autocomplete<IStateResult> 
