@@ -4,6 +4,7 @@ import './App.css';
 
 import Covid19App from './components/Covid19App';
 import Container from '@material-ui/core/Container';
+import LandingPage from './components/LandingPage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Container maxWidth="sm">
+          <LandingPage />
           <Covid19App />
         </Container>
       </header>
