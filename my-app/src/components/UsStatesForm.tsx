@@ -29,7 +29,7 @@ class UsStatesForm extends React.Component<OnSelectProps> {
   render() {
     return (
     <Autocomplete<IStateResult> 
-      id="country-select-demo" 
+      id="state-select-demo" 
       style={{ 
         width: 300,
       }} 
