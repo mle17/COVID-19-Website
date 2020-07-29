@@ -1,10 +1,10 @@
 import React from "react";
-import UsStatesForm from "./UsStatesForm";
-import NumberDaysQuarantinedForm from "./NumberDaysQuarantinedForm";
+import NumberDaysQuarantinedForm from "../NumberDaysQuarantinedForm";
 import { AutocompleteChangeReason } from "@material-ui/lab/Autocomplete";
-import { IStateResult } from "../interfaces/interfaces";
-import ResultsDisplay from "./ResultsDisplay";
+import { IStateResult } from "../../interfaces/interfaces";
+import ResultsDisplay from "../ResultsDisplay";
 import { Grid } from "@material-ui/core";
+import IntroInfo from "./IntroInfo";
 
 interface IState {
     isInputFormComplete: boolean,
@@ -46,12 +46,10 @@ class LandingPage extends React.Component<{}, IState> {
         return (
             <div style = {{height:"100vh"}}>
                 <Grid container spacing={3}>
-                    <Grid container xs={12} justify="center" alignItems="center" alignContent="center">
-                        <UsStatesForm
-                            OnSelectHandler={this.handleStateChange}
-                        />
+                    <Grid container xs={6}>
+                        <IntroInfo />
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid item xs={6}>
                         <NumberDaysQuarantinedForm 
                             OnChangeHandler={this.handleDaysChange}
                         />
