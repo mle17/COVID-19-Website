@@ -5,6 +5,7 @@ import { IStateResult } from "../../interfaces/interfaces";
 import ResultsDisplay from "../ResultsDisplay";
 import { Grid } from "@material-ui/core";
 import IntroInfo from "./IntroInfo";
+import logo from "../../logo.svg";
 
 interface IState {
     isInputFormComplete: boolean,
@@ -50,9 +51,7 @@ class LandingPage extends React.Component<{}, IState> {
                         <IntroInfo />
                     </Grid>
                     <Grid item xs={6}>
-                        <NumberDaysQuarantinedForm 
-                            OnChangeHandler={this.handleDaysChange}
-                        />
+                        <img src={logo} className="App-logo" alt="logo" />
                     </Grid>
                     <Grid item xs={12}>
                         <ResultsDisplay 
