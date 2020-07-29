@@ -5,6 +5,7 @@ import { AutocompleteChangeReason } from "@material-ui/lab/Autocomplete";
 import { IStateResult } from "../interfaces/interfaces";
 import ResultsDisplay from "./ResultsDisplay";
 import { Grid } from "@material-ui/core";
+import { getCountiesFromState } from "../routes/cases";
 
 interface IState {
     isInputFormComplete: boolean,
@@ -42,6 +43,7 @@ class Covid19App extends React.Component<{}, IState> {
 
     render() {
         console.log(this.state);
+        
         return (
             <div>
                 <Grid container spacing={3}>

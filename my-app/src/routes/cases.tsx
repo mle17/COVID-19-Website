@@ -36,8 +36,11 @@ function getFutureNumInfected(usState: string | undefined, numDays: number) {
     return futureNumInfected;
 }
 
+function getCountiesFromState(usState: string | undefined) {
+}
 
 export { 
     getCasesForState,
-    getFutureNumInfected
+    getFutureNumInfected,
+    getCountiesFromState
 };
