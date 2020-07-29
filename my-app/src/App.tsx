@@ -11,15 +11,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" style={{padding: "0px"}}>
           <CovidAppBar />
-          <Box p={1}>
-            p={1}
-          </Box>
-          <Container maxWidth="md">
-            <LandingPage />
-            <Covid19App />
-          </Container>
+          <div style={{
+            background: "#a4a7f4"
+          }}>
+            <Box p={4}></Box>
+            <Container maxWidth="md">
+              <LandingPage />
+              <Covid19App />
+            </Container>
+          </div>
         </Container>
       </header>
     </div>

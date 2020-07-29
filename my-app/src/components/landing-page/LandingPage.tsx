@@ -9,7 +9,7 @@ class LandingPage extends React.Component {
         return (
             <div style = 
             {{
-                height:"100vh"
+                height: "100vh",
             }}>
                 <Grid container spacing={3}>
                     <Grid container item xs={6}>
