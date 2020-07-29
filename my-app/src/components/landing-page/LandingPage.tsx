@@ -7,7 +7,10 @@ import PredictInfo from "./PredictionInfo";
 class LandingPage extends React.Component {
     render() {
         return (
-            <div style = {{height:"100vh"}}>
+            <div style = 
+            {{
+                height:"100vh"
+            }}>
                 <Grid container spacing={3}>
                     <Grid container item xs={6}>
                         <IntroInfo />
