@@ -1,11 +1,18 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Paper, CardMedia } from "@material-ui/core";
 import IntroInfo from "./IntroInfo";
-import logo from "../../logo.svg";
+import logo from "../../images/people_icon.png";
 import PredictInfo from "./PredictionInfo";
 
 class LandingPage extends React.Component {
     render() {
+        const styles = {
+            logo : {
+                backgroundImage: `url(${logo})`,
+                height: "100%",
+            }
+        }
+
         return (
             <div style = 
             {{
