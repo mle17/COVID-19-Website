@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Button, Box } from '@material-ui/core';
+import { Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -15,11 +15,6 @@ const useStyles = makeStyles({
     body: {
         textAlign: "left",
     },
-
-    button: {
-        backgroundColor: "orange",
-        color: "white",
-    }
 });
 
 export default function IntroInfo() {
@@ -36,10 +31,6 @@ export default function IntroInfo() {
                 Families and community members are gradually returning to previously restricted 
                 activities when the COVID-19 pandemic began.
             </Typography>
-            <Box p={1}></Box>
-            <Button variant="contained" className={classes.button}>
-                Get started
-            </Button>
         </div>
     );
 }
