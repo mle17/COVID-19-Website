@@ -32,12 +32,12 @@ function getFutureNumInfected(usState: string | undefined, numDays: number) {
         return NaN;
     }
 
-    const numDaysAfterDoubling: number = 14;
-    const doublingPeriod = numDays / numDaysAfterDoubling;
+    const numDaysForPowerChange: number = 7;
+    const numOfPowerChanges = numDays / numDaysForPowerChange;
     console.log(usState);
     const rtValue = RTValueByState[usState];
 
-    const futureNumInfected = (1 + Math.pow(rtValue, doublingPeriod))
+    const futureNumInfected = (1 + Math.pow(rtValue, numOfPowerChanges))
         .toFixed(2);
 
     return futureNumInfected;
