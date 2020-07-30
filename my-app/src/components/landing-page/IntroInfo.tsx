@@ -10,6 +10,8 @@ const useStyles = makeStyles({
 
     header: {
         textAlign: "left",
+        fontWeight:"bold",
+        color:"#2F281E",
     },
 
     body: {
