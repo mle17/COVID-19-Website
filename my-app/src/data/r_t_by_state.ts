@@ -1,3 +1,4 @@
+// Data from https://rt.live/ as of July 29, 2020 using July 28 values.
 export const RTValueByState: {[id: string]: number} = {
     "ME" : 0.899233505930981,
     "NH" : 1.05892753021077,
