@@ -10,7 +10,7 @@ class NumberDaysQuarantinedForm extends React.Component<OnChangeProps> {
    return (
     <TextField 
       id="standard-number" 
-      label="Day(s)" 
+      label="Day(s) distanced" 
       type="number"
       defaultValue={7}
       InputLabelProps={{
