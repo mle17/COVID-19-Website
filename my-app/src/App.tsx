@@ -19,6 +19,13 @@ function App() {
             <Box p={4}></Box>
             <Container maxWidth="md">
               <LandingPage />
+            </Container>
+          </div>
+          <div style={{
+            background: "white"
+          }}>
+            <Container maxWidth="md">
+              <Box p={4}></Box>
               <Covid19App />
             </Container>
           </div>
