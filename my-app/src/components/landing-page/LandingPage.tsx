@@ -1,8 +1,9 @@
 import React from "react";
-import { Grid, Paper, CardMedia } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import IntroInfo from "./IntroInfo";
 import logo from "../../images/people_icon.png";
 import PredictInfo from "./PredictionInfo";
+import Covid19App from "../Covid19App";
 
 class LandingPage extends React.Component {
     render() {
@@ -27,6 +28,9 @@ class LandingPage extends React.Component {
                     </Grid>
                     <Grid container item md={12} justify="center">
                         <PredictInfo />
+                    </Grid>
+                    <Grid>
+                        <Covid19App></Covid19App>
                     </Grid>
                 </Grid>
             </div>)

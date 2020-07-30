@@ -21,14 +21,6 @@ function App() {
               <LandingPage />
             </Container>
           </div>
-          <div style={{
-            background: "white"
-          }}>
-            <Container maxWidth="md">
-              <Box p={4}></Box>
-              <Covid19App />
-            </Container>
-          </div>
         </Container>
       </header>
     </div>
