@@ -7,6 +7,11 @@ const useStyles = makeStyles({
         width: '50%',
         color: "black",
     },
+
+    text: {
+        color: "#2f281e",
+        fontWeight: "bold",
+    }
   });
 
 export default function PredictInfo() {
@@ -14,7 +19,7 @@ export default function PredictInfo() {
 
     return (
         <div className={classes.root}>
-            <Typography variant="h5">
+            <Typography variant="h5" className={classes.text}>
                 Let's predict how many lives you can save...
             </Typography>
         </div>
