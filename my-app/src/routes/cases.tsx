@@ -32,22 +32,31 @@ function getFutureNumInfected(usState: string | undefined, numDays: number) {
         return NaN;
     }
 
-    const numDaysForPowerChange: number = 7;
-    const numOfPowerChanges = numDays / numDaysForPowerChange;
+    // Getting values for formula.
     console.log(usState);
-    const rtValue = RTValueByState[usState];
+    const rtValue: number = RTValueByState[usState];
 
-    const futureNumInfected = (1 + Math.pow(rtValue, numOfPowerChanges))
-        .toFixed(2);
+    const numInfectedAtZeroDays: number = getValueOfIntegratedFormula(0, rtValue);
+    const numInfectedAtNumDays: number = getValueOfIntegratedFormula(numDays, rtValue);
 
-    return futureNumInfected;
+    // Calculating predicted infected.
+    const futureNumInfected: number = numInfectedAtNumDays - numInfectedAtZeroDays;
+    const truncatedFutureNumInfected: string = futureNumInfected.toFixed(2);
+
+    return truncatedFutureNumInfected;
 }
 
-function getCountiesFromState(usState: string | undefined) {
+function getValueOfIntegratedFormula(numDays: number, rtValue: number) {
+    const infectionPeriodInDays: number = 7;
+    const numInfectionPeriods: number = numDays / infectionPeriodInDays;
+
+    const futureNumInfectedAtNumDays: number 
+        = Math.pow(rtValue, numInfectionPeriods) / Math.log(rtValue);
+
+    return futureNumInfectedAtNumDays;
 }
 
 export { 
     getCasesForState,
     getFutureNumInfected,
-    getCountiesFromState
 };
