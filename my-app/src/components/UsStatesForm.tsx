@@ -32,6 +32,7 @@ class UsStatesForm extends React.Component<OnSelectProps> {
       id="state-select-demo" 
       style={{ 
         width: 300,
+        outlineColor: "#ff7b5b",
       }} 
       options={NonTerritoryStates} 
       // classes={{
@@ -47,7 +48,7 @@ class UsStatesForm extends React.Component<OnSelectProps> {
       renderInput={(params) => 
         (<TextField 
           {...params} 
-          label="Choose a state" 
+          label="Select your state" 
           variant="outlined" 
           inputProps={{
             ...params.inputProps,
