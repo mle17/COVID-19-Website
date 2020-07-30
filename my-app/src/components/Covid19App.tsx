@@ -35,7 +35,7 @@ class Covid19App extends React.Component<{}, IState> {
         value: IStateResult | null,
         reason: AutocompleteChangeReason) {
             this.setState({
-                usState: value?.name,
+                usState: value?.abbreviation,
                 isInputFormComplete: true
             });
     }

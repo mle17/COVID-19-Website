@@ -1,4 +1,5 @@
 import { NovelCovid, State } from 'novelcovid';
+import { RTValueByState } from '../data/r_t_by_state';
 
 /**
  * Gets COVID-19 data for a U.S. state.
@@ -27,10 +28,16 @@ async function getCasesForState(inputState: string) {
  * @param numDays 
  */
 function getFutureNumInfected(usState: string | undefined, numDays: number) {
+    if (usState === undefined) {
+        return NaN;
+    }
+
     const numDaysAfterDoubling: number = 14;
     const doublingPeriod = numDays / numDaysAfterDoubling;
+    console.log(usState);
+    const rtValue = RTValueByState[usState];
 
-    const futureNumInfected = Math.pow(2, doublingPeriod)
+    const futureNumInfected = (1 + Math.pow(rtValue, doublingPeriod))
         .toFixed(2);
 
     return futureNumInfected;
