@@ -47,7 +47,7 @@ class UsStatesForm extends React.Component<OnSelectProps> {
       renderInput={(params) => 
         (<TextField 
           {...params} 
-          label="Choose a state" 
+          label="Select your state" 
           variant="outlined" 
           inputProps={{
             ...params.inputProps,
