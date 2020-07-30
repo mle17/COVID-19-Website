@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Box } from "@material-ui/core";
 import IntroInfo from "./IntroInfo";
 import logo from "../../images/people_icon.png";
 import PredictInfo from "./PredictionInfo";
@@ -17,7 +17,7 @@ class LandingPage extends React.Component {
         return (
             <div style = 
             {{
-                height: "90vh",
+                height: "110vh",
             }}>
                 <Grid container spacing={3}>
                     <Grid container item xs={6}>
@@ -29,7 +29,8 @@ class LandingPage extends React.Component {
                     <Grid container item md={12} justify="center">
                         <PredictInfo />
                     </Grid>
-                    <Grid>
+                    <Grid >
+                        <Box p={2}></Box>
                         <Covid19App></Covid19App>
                     </Grid>
                 </Grid>
