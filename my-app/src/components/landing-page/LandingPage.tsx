@@ -7,13 +7,6 @@ import Covid19App from "../Covid19App";
 
 class LandingPage extends React.Component {
     render() {
-        const styles = {
-            logo : {
-                backgroundImage: `url(${logo})`,
-                height: "100%",
-            }
-        }
-
         return (
             <div style = 
             {{

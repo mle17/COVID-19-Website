@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 
-import Covid19App from './components/Covid19App';
 import Container from '@material-ui/core/Container';
 import LandingPage from './components/landing-page/LandingPage';
 import CovidAppBar from './components/CovidAppBar';
